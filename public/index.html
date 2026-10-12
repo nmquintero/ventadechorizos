@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chorizos precocidos, hechos con calma y entregados en tu puerta." />
+    <title>La Chori · Chorizos precocidos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div class="announcement"><span>Envío gratis</span> en pedidos desde $60.000 <span class="dot">·</span> Recibe hoy en Bogotá</div>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="La Chori, inicio"><span class="brand-mark">LC</span><span>la<br /><b>chori</b></span></a>
+      <nav aria-label="Navegación principal"><a href="#menu">El menú</a><a href="#historia">Nuestra historia</a><a href="#domicilio">Domicilios</a></nav>
+      <button class="cart-button" id="open-cart" type="button" aria-label="Abrir carrito"><i data-lucide="shopping-bag"></i><span>Mi pedido</span><b id="cart-count">0</b></button>
+    </header>
+
+    <main id="inicio">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Precocidos · Artesanales · Listos en 8 minutos</p>
+          <h1>El chorizo que<br /><em>se roba la mesa.</em></h1>
+          <p class="hero-text">Hechos con recetas de casa, ingredientes honestos y ese sabor que pide otra ronda. Calienta, dora y disfruta.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#menu">Ver el menú <i data-lucide="arrow-down-right"></i></a><span class="delivery-note"><i data-lucide="bike"></i> Domicilio el mismo día</span></div>
+        </div>
+        <div class="hero-image"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1400&q=85" alt="Mesa servida con comida para compartir" /><div class="hero-stamp"><span>100%</span><small>hecho<br />en casa</small></div></div>
+      </section>
+
+      <section class="trust-bar" aria-label="Beneficios"><div><i data-lucide="flame"></i><span><b>Precocidos</b> para llegar y dorar</span></div><div><i data-lucide="leaf"></i><span><b>Ingredientes</b> que sí reconoces</span></div><div><i data-lucide="heart"></i><span><b>Hechos</b> con cariño de barrio</span></div></section>
+
+      <section class="menu-section" id="menu">
+        <div class="section-heading"><div><p class="eyebrow">La vitrina</p><h2>Escoge tu favorito.</h2></div><div class="category-tabs" role="tablist"><button class="active" data-filter="todos">Todos</button><button data-filter="tradicional">Tradicional</button><button data-filter="especial">Especiales</button></div></div>
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+      <section class="story-section" id="historia"><div class="story-image"><img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1000&q=85" alt="Preparación artesanal de alimentos" /></div><div class="story-copy"><p class="eyebrow">Una historia sencilla</p><h2>Buen producto.<br /><em>Buena compañía.</em></h2><p>La Chori nació de una idea simple: hacer un chorizo que diera ganas de invitar. Seleccionamos cada corte, mezclamos los condimentos en pequeños lotes y dejamos que el sabor hable por sí solo.</p><div class="signature">con cariño,<br /><strong>La familia Chori</strong></div></div></section>
+
+      <section class="delivery-section" id="domicilio"><div><p class="eyebrow">A tu puerta</p><h2>Del frío al sartén,<br /><em>sin complicaciones.</em></h2></div><div class="delivery-steps"><div><span>01</span><b>Elige</b><p>Arma tu pedido con tus sabores favoritos.</p></div><div><span>02</span><b>Recibe</b><p>Lo llevamos refrigerado a tu dirección.</p></div><div><span>03</span><b>Dora</b><p>Solo 8 minutos y la mesa está servida.</p></div></div></section>
+    </main>
+
+    <footer><a class="brand" href="#inicio"><span class="brand-mark">LC</span><span>la<br /><b>chori</b></span></a><p>Chorizos precocidos para compartir sin afán.</p><span>© 2026 La Chori</span></footer>
+
+    <div class="overlay" id="overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Tu pedido"><div class="drawer-head"><div><p class="eyebrow">Tu pedido</p><h2>La bolsita</h2></div><button class="icon-button" id="close-cart" aria-label="Cerrar carrito"><i data-lucide="x"></i></button></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><i data-lucide="shopping-bag"></i><p>Tu bolsita está esperando<br />algo rico.</p><a href="#menu" id="go-menu">Ver el menú</a></div><div class="cart-summary" id="cart-summary"><div><span>Subtotal</span><b id="cart-subtotal">$0</b></div><div><span>Domicilio</span><b id="cart-delivery">$5.000</b></div><div class="total"><span>Total</span><b id="cart-total">$0</b></div><button class="button button-primary full" id="checkout-button">Finalizar pedido <i data-lucide="arrow-right"></i></button><small>Pago contra entrega · Bogotá</small></div></aside>
+
+    <div class="modal-wrap" id="checkout-modal" aria-hidden="true"><div class="modal"><div class="modal-head"><div><p class="eyebrow">Último paso</p><h2>¿Dónde lo llevamos?</h2></div><button class="icon-button" id="close-modal" aria-label="Cerrar formulario"><i data-lucide="x"></i></button></div><form id="checkout-form"><label>Tu nombre<input name="name" required placeholder="Ej. Mariana Gómez" /></label><label>Celular<input name="phone" type="tel" required placeholder="300 123 4567" /></label><label>Dirección de entrega<input name="address" required placeholder="Calle, carrera, número y barrio" /></label><label>Nota para el domicilio <span>(opcional)</span><textarea name="notes" rows="2" placeholder="Apartamento, portería... "></textarea></label><button class="button button-primary full" type="submit">Pedir ahora <i data-lucide="check"></i></button><p class="form-error" id="form-error"></p></form></div></div>
+    <div class="toast" id="toast"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
